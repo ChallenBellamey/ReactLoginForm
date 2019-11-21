@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import LanguageInput from './components/LanguageInput.js';
+import LoginMenu from './components/LoginMenu/LoginMenu.js';
 
 class App extends Component {
   state = {
@@ -12,6 +13,7 @@ class App extends Component {
 
     return <div className="App">
       <LanguageInput language={language} setLanguage={this.setLanguage}/>
+      <LoginMenu language={language} />
     </div>
   };
 
