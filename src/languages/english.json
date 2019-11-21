@@ -1,0 +1,9 @@
+{
+    "welcome_message": "Good afternoon",
+    "username_label": "Username",
+    "password_label": "Password",
+    "login_label": "Login",
+    "language_label": "Language",
+    "home_label": "Home",
+    "home_message": "Thankyou for using this app. Please log out to refresh the app."
+}
