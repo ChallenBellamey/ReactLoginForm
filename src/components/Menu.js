@@ -1,15 +1,16 @@
 import React from 'react';
+import '../stylesheets/Menu.css';
 
 export default function Menu ({title, children, button_label, button_function}) {
-    return <div classname={'menu'}>
-        <div classname={'menu_header'}>
-            {title}
+    return <div className={'menu'}>
+        <div className={'menu_header'}>
+            <p className={'menu_title'}>
+                {title}
+            </p>
         </div>
-        <div classname={'menu_body'}>
-            <div classname={'menu_content'}>
-                {children}
-            </div>
-            <button classname={'menu_button'}
+        <div className={'menu_body'}>
+            {children}
+            <button className={'menu_button'}
                     onClick={button_function}>
                 {button_label}
             </button>
