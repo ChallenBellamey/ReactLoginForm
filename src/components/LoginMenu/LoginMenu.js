@@ -6,7 +6,7 @@ const languages = require('../../languages/index.js');
 
 export default class LoginMenu extends Component {
     state = {
-        
+        password: ''
     };
 
     render () {
@@ -20,5 +20,11 @@ export default class LoginMenu extends Component {
                     <UsernameInput username_label={labels.username_label} username={username} updateUsername={updateUsername} />
                     <PasswordInput password_label={labels.password_label} />
                 </Menu>
+    };
+
+    updatePassword = (password) => {
+        this.setState({
+            password
+        });
     };
 };
