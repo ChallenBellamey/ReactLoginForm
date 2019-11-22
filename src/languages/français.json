@@ -2,8 +2,8 @@
     "welcome_message": "bonne après-midi",
     "username_label": "Nom d'utilisateur",
     "password_label": "Mot de passe",
-    "login_label": "S'identifier",
-    "logout_label": "Connectez-Out",
+    "login_label": "Connexion",
+    "logout_label": "Deconnexion",
     "language_label": "La langue",
     "home_label": "Accueil",
     "home_message": "Merci d'utiliser cette app. Veuillez vous déconnecter pour actualiser l'application."

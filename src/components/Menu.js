@@ -12,7 +12,7 @@ export default function Menu ({title, children, button_label, button_function}) 
             {children}
             <button className={'menu_button'}
                     onClick={button_function}>
-                {button_label}
+                {button_label.toUpperCase()}
             </button>
         </div>
     </div>
