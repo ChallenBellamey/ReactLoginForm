@@ -10,14 +10,14 @@ export default class LoginMenu extends Component {
     };
 
     render () {
-        const {language, toggleUserLogStatus} = this.props;
+        const {language, username, updateUsername, toggleUserLogStatus} = this.props;
         const labels = languages[language];
 
         return <Menu 
                 title={labels.welcome_message}
                 button_label={labels.login_label}
                 button_function={() => toggleUserLogStatus(true)}>
-                    <UsernameInput username_label={labels.username_label} />
+                    <UsernameInput username_label={labels.username_label} username={username} updateUsername={updateUsername} />
                     <PasswordInput password_label={labels.password_label} />
                 </Menu>
     };

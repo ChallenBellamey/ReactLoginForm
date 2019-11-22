@@ -12,11 +12,11 @@ class App extends Component {
   };
 
   render () {
-    const {language, userLoggedIn, username} = this.state;
+    const {language, username, userLoggedIn} = this.state;
 
     return <div className="App">
       <LanguageInput language={language} setLanguage={this.setLanguage} />
-      {!userLoggedIn && <LoginMenu language={language} toggleUserLogStatus={this.toggleUserLogStatus} />}
+      {!userLoggedIn && <LoginMenu language={language} username={username} updateUsername={this.updateUsername} toggleUserLogStatus={this.toggleUserLogStatus} />}
       {userLoggedIn && <HomeMenu language={language} username={username} toggleUserLogStatus={this.toggleUserLogStatus} />}
     </div>
   };
