@@ -7,6 +7,8 @@ import HomeMenu from './components/HomeMenu.js';
 class App extends Component {
   state = {
     language: 'english',
+    userLoggedIn: false,
+    username: ''
   };
 
   render () {
@@ -14,14 +16,22 @@ class App extends Component {
 
     return <div className="App">
       <LanguageInput language={language} setLanguage={this.setLanguage}/>
-      <LoginMenu language={language} />
-      <HomeMenu language={language} username={null} />
+      <LoginMenu language={language} toggleUserLogStatus={this.toggleUserLogStatus} />
+      <HomeMenu language={language} username={null} toggleUserLogStatus={this.toggleUserLogStatus} />
     </div>
   };
 
   setLanguage = (language) => {
     this.setState({
       language
+    });
+  };
+
+  toggleUserLogStatus = (userLoggedIn) => {
+    const username = (userLoggedIn) ? this.state.username : '';
+    this.setState({
+      userLoggedIn,
+      username
     });
   };
 };
