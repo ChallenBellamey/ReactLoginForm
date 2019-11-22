@@ -7,23 +7,29 @@ import HomeMenu from './components/HomeMenu.js';
 class App extends Component {
   state = {
     language: 'english',
-    userLoggedIn: false,
-    username: ''
+    username: '',
+    userLoggedIn: false
   };
 
   render () {
-    const {language} = this.state;
+    const {language, userLoggedIn, username} = this.state;
 
     return <div className="App">
-      <LanguageInput language={language} setLanguage={this.setLanguage}/>
-      <LoginMenu language={language} toggleUserLogStatus={this.toggleUserLogStatus} />
-      <HomeMenu language={language} username={null} toggleUserLogStatus={this.toggleUserLogStatus} />
+      <LanguageInput language={language} setLanguage={this.setLanguage} />
+      {!userLoggedIn && <LoginMenu language={language} toggleUserLogStatus={this.toggleUserLogStatus} />}
+      {userLoggedIn && <HomeMenu language={language} username={username} toggleUserLogStatus={this.toggleUserLogStatus} />}
     </div>
   };
 
   setLanguage = (language) => {
     this.setState({
       language
+    });
+  };
+
+  updateUsername = (username) => {
+    this.setState({
+      username
     });
   };
 
